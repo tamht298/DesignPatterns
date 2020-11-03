@@ -3,16 +3,18 @@ package vn.com.tma.FactoryPattern;
 public class PizzaFactory {
 
     public Pizza getPizza(PizzaType pizzaType) {
-        if(pizzaType.equals(null)) return null;
+        if (pizzaType.equals(null)) return null;
+
+        Pizza pizza = null;
         switch (pizzaType) {
             case CHEESE: {
-                return new CheesePizza();
+                pizza = new CheesePizza();
             }
             case VEGGIE: {
-                return new VeggiePizza();
+                pizza = new VeggiePizza();
             }
 
         }
-        return null;
+        return pizza;
     }
 }
