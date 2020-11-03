@@ -2,7 +2,7 @@ package vn.com.tma.FactoryPattern;
 
 public class PizzaFactory {
 
-    public Pizza getPizza(PizzaType pizzaType) {
+    public static Pizza getPizza(PizzaType pizzaType) {
         if (pizzaType.equals(null)) return null;
 
         Pizza pizza = null;
@@ -13,7 +13,6 @@ public class PizzaFactory {
             case VEGGIE: {
                 pizza = new VeggiePizza();
             }
-
         }
         return pizza;
     }
